@@ -3,7 +3,7 @@
 
     var socketApp = win.socketApp || (win.socketApp = {});
     socketApp.socket.on('push receive', function(data) {
-        //alert(data.type + '番テーブルがお呼び出しです。');
+        alert(data.type + '番テーブルがお呼び出しです。');
         var div = doc.getElementById('pushList'); 
         var p = doc.createElement('p');
         p.innerHTML = data.type + '番テーブルがお呼び出しです。';
