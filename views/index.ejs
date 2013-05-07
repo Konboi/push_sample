@@ -7,9 +7,10 @@
   <body>
     <h1><%= title %></h1>
     <p>Welcome to <%= title %></p>
+    <p>呼びだし番号: <input type="number" id="tableNumber"></p>
     <p><input type="button" value="push" id="send" /></p>
+    <p>削除番号: <input type="number" id="deleteTableNumber"></p>
     <p><input type="button" value="delete" id="delete" /></p>
-
     <script type="text/javascript">
         var socketurl = "<%= socketurl %>";
     </script>

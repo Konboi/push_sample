@@ -37,7 +37,7 @@ server.listen(app.get('port'), function(){
   console.log('Express server listening on port ' + app.get('port'));
 });
 
-io.set('log level', 1);
+io.set('log level', 2);
 io.sockets.on('connection', function (socket) {
     console.log('connect');
 
@@ -45,8 +45,8 @@ io.sockets.on('connection', function (socket) {
         socket.broadcast.emit('push receive', data);
     });
 
-    socket.on('push delete', function () {
-        socket.broadcast.emit('push delete');
+    socket.on('push delete', function (data) {
+        socket.broadcast.emit('push delete', data);
     });
 
     socket.on('disconnect', function() {
