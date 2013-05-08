@@ -15,11 +15,10 @@
     });
 
     socketApp.socket.on('push delete', function(data) {
+        var parent = doc.getElementById('pushList');
         var removeElement = doc.getElementsByClassName(data.type);
-        for(var i = 0; i <= removeElement.length+1; i++) {
-            var parent = removeElement[i].parentNode;
+        for(var i = removeElement.length - 1; i >= 0 ; i--) {
             parent.removeChild(removeElement[i]);
         }
     });
-
 }(window, document));
