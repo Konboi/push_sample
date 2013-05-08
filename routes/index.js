@@ -8,5 +8,5 @@ exports.index = function(req, res){
 };
 
 exports.receiver = function(req, res){
-  res.render('receiver', { title: 'Receiver', socketurl: req.protocol + "://" + req.get('host') });
+  res.render('receiver', { title: '呼び出し中', socketurl: req.protocol + "://" + req.get('host') });
 };
