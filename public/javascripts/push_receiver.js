@@ -16,7 +16,7 @@
 
     socketApp.socket.on('push delete', function(data) {
         var removeElement = doc.getElementsByClassName(data.type);
-        for( var i = 0; i < removeElement.length; i++ ) {
+        for(var i = 0; i <= removeElement.length+1; i++) {
             var parent = removeElement[i].parentNode;
             parent.removeChild(removeElement[i]);
         }
